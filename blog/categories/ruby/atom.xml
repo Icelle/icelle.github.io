@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby, | My Octopress Blog]]></title>
+  <link href="http://Icelle.github.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://Icelle.github.io/"/>
+  <updated>2013-11-07T22:23:25-05:00</updated>
+  <id>http://Icelle.github.io/</id>
+  <author>
+    <name><![CDATA[Icelle]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learn Programming Basics Rolling Dice, Part 1]]></title>
+    <link href="http://Icelle.github.io/blog/2013/11/07/first-post/"/>
+    <updated>2013-11-07T19:34:00-05:00</updated>
+    <id>http://Icelle.github.io/blog/2013/11/07/first-post</id>
+    <content type="html"><![CDATA[<p>I started dabbling into the coding arts a few months ago (hence Code Gazer). I read Chris Pine’s <em>Learn to Program</em>. This is my attempt to elaborate on Pine’s Die Example to further understand the relationships between objects, classes, variables and methods.</p>
+
+<p><strong>Pine Example:</strong> Create a die that gives you a random number when you roll it.</p>
+
+<p>```ruby
+class Die         #create a class
+  def roll        #create method</p>
+
+<pre><code>1 + rand(6)     #method logic
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>Everything is an object. Class is an object that allows us to make new classes of objects and defines how those classes behave. A method is the behavior of those objects.
+A die is not a basic object in Ruby (i.e. range, integers, strings, arrays and hashes) so in this example, we need to create a new object. We can do that by creating a new class. To create a new class, we use a construct called <code>class</code> (which defines a class&rsquo;s behavior) and a class name, <code>Die</code>. The first letter of a class name is always capitalized.</p>
+
+<p>After creating a class, we need to define its behavior. We can do that by making a method (behavior) that applies to the <code>class Die</code>: use the word <code>def</code> followed by the method name, <code>roll</code>. We define <code>roll</code> through the logic <code>1 + rand(6)</code> which says &ldquo;return a random number between 1 and 6.&rdquo;</p>
+
+<p>Simple enough? Let&rsquo;s go to the next example.</p>
+
+<p><strong>Code Gazer Die Problem 1:</strong> Create one die that gives you a random number and color when you roll it.</p>
+
+<p>```ruby
+class Die
+  attr_accessor :num, :color</p>
+
+<p>  @@colors = {1=>&ldquo;yellow&rdquo;, 2=>&ldquo;blue&rdquo;, 3=>&ldquo;green&rdquo;, 4=>&ldquo;black&rdquo;, 5=>&ldquo;white&rdquo;, 6=>&ldquo;red&rdquo;}     #class variable hash</p>
+
+<p>  def initialize</p>
+
+<pre><code>@num = nil
+@color = nil    
+roll
+</code></pre>
+
+<p>  end</p>
+
+<p>  def roll</p>
+
+<pre><code>@num = 1 + rand(6)                                                                  # instance variable
+@color = @@colors[@num]                                                             # hash key look-up
+puts "You rolled a #{@num} with color #{@color}"
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>Let&rsquo;s take it one step at a time. What do we need?</p>
+
+<p><strong>We need a die.</strong>
+To create an object, we need to create a new class: <code>class Die</code>.</p>
+
+<p><strong>Each side of the die must have a number and color that correspond with each other.</strong>
+  We need a container (variable) that will hold our numbers and colors. A variable is a storage location containing values. Variables are very useful because we can use them as reference, allowing us to reuse those values at a later time. Here, we need to create a class variable because we want the <code>@@colors</code> to be available to all methods in the class <code>Die</code>. Notice the <code>@@</code> symbol before the word colors? That means colors is a class variable.</p>
+
+<p>  Inside the variable, we need slots to hold our numbers and colors. A <code>Hash</code> is a perfect object for that. A hash variable is like a dictionary: you have a word (the key) and its corresponding definition (the value). Here, we created a <code>Hash</code> containing a set of colors (values) that correspond to each number in the die (keys). Like this:</p>
+
+<p><code>ruby
+@@colors = {1=&gt;"yellow", 2=&gt;"blue", 3=&gt;"green", 4=&gt;"black", 5=&gt;"white", 6=&gt;"red"}
+</code>
+<strong>When we create the object, die, it needs to roll.</strong>
+  Whenever we make a new object, the initialize method, <code>def initialize</code>, allows us to set up the object&rsquo;s initial state: we can provide default values to the attributes of the object (instance variables <code>@num</code> and <code>@color</code>). Everything we put in the initialize method (like <code>roll</code>) becomes a general/default rule and is automatically executed when you create a new object: <code>d = Die.new</code>.</p>
+
+<p><strong>When we roll the die, we get a random color and number.</strong>
+  The die will roll automatically because it&rsquo;s being called inside the initialize method, but it doesn&rsquo;t give us a random color or number yet. We need to create a new method to define the behavior of the Die when it rolls: <code>def roll</code>.</p>
+
+<p>  To see what color and number the die picks, we need to define variables we set up in the initialize method. We use the <code>@</code> symbol instead of <code>@@</code> because we want instance variables, not a class variable. Unlike a class variable (which is commonly available to the entire <code>class Die</code>; this means it&rsquo;s available for class methods (more on that another time) and instance methods, i.e. <code>roll</code>), each instance of a class has its own set of instance variables. So here, <code>@num</code> and <code>@color</code> applies only to the specific instance created via <code>Die.new</code>.</p>
+
+<p>  We need some logic that allows us to get a random number between 1 &ndash; 6 every time the die rolls. We store the number picked in <code>@num</code> so we can reference back to <code>@@colors</code> to see which color corresponds with the number. To do that, we set <code>@color</code> as a key look-up on the <code>@@colors</code> hash.
+<code>ruby
+@num = 1 + rand(6)
+@color = @@colors[@num]
+</code></p>
+
+<p><strong>Did we forget something?</strong>
+  If we create an object, <code>d = Die.new</code>, the program has access to the random color and number, but the object itself can&rsquo;t retrieve variables. For example, <code>d.num</code> and <code>d.color</code> gives us:</p>
+
+<p><code>ruby
+NoMethodError: undefined method 'num' for #&lt;Die:0x007fdde294b778 @num=1, @color="yellow"&gt;
+</code></p>
+
+<p>  We can see the object has <code>@num=1, @color="yellow"</code> (Ruby is calling the inspect method on the object, which irb is returnign) in it, but we just can&rsquo;t retrieve and use it. To do that, we can use a Ruby construct: <code>attr_accessor</code>. This construct is a shortcut given to us by the Ruby Gods to help us with our code crafting.</p>
+
+<p>  <code>attr_accessor</code> provides two methods automatically for the developer: a &lsquo;getter&rsquo; method and a &lsquo;setter&rsquo; method. The sole purpose of the getter is to read/return the value of a particular instance variable. The setter, on the other hand, assigns/sets the value for a particular instance variable. When we write,</p>
+
+<p><code>ruby
+attr_accessor :num, :color  
+</code></p>
+
+<p>  we&rsquo;re telling our program to do build these methods behind the scenes:</p>
+
+<p>```ruby</p>
+
+<h1>getters</h1>
+
+<p>def num
+  @num
+end</p>
+
+<p>def color
+  @color
+end</p>
+
+<h1>setters</h1>
+
+<p>def num=(value)
+  @num = value
+end</p>
+
+<p>def color=(value)
+  @color = value
+end
+```</p>
+
+<p>  I think we have everything we need. Let&rsquo;s run the program and see what we get:</p>
+
+<p><code>ruby
+2.0.0p247 :049 &gt; d = Die.new
+You rolled a 6 with color red
+ =&gt; #&lt;Die:0x007fa7889321f0 @num=6, @color="red"&gt;
+</code></p>
+
+<p>  Awesome. Let&rsquo;s try it a couple of times to see if it gives us a random color and number.</p>
+
+<p><code>ruby
+d.roll =&gt; "You rolled a 4 with color black"
+d.roll =&gt; "You rolled a 2 with color blue"
+d.roll =&gt; "You rolled a 1 with color yellow"
+</code></p>
+
+<p>  It works! Yay!</p>
+
+<p>Phew! I hope I explained those concepts clearly and sufficiently. On my next post, I am going to change it up a bit and create two different dice, one colored and one numbered, so we can learn about class inheritance.</p>
+
+<p><em>Don&rsquo;t impose expectations onto things. Let things be. Abandon your hopes and fears. They&rsquo;re irrelevant.</em></p>
+]]></content>
+  </entry>
+  
+</feed>
