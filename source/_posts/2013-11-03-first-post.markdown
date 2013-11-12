@@ -80,7 +80,7 @@ To create an object, we need to create a new class: `class Die`.
 NoMethodError: undefined method 'num' for #<Die:0x007fdde294b778 @num=1, @color="yellow">
 ```
 
-  We can see the object has `@num=1, @color="yellow"` (Ruby is calling the inspect method on the object, which irb is returnign) in it, but we just can't retrieve and use it. To do that, we can use a Ruby construct: `attr_accessor`. This construct is a shortcut given to us by the Ruby Gods to help us with our code crafting. 
+  We can see the object has `@num=1, @color="yellow"` (Ruby is calling the inspect method on the object, which irb is returning) in it, but we can't retrieve and use it. To do that, we can use a Ruby construct: `attr_accessor`. This construct is a shortcut given to us by the Ruby Gods to help us with our code crafting. 
 
   `attr_accessor` provides two methods automatically for the developer: a 'getter' method and a 'setter' method. The sole purpose of the getter is to read/return the value of a particular instance variable. The setter, on the other hand, assigns/sets the value for a particular instance variable. When we write,
 
@@ -88,7 +88,7 @@ NoMethodError: undefined method 'num' for #<Die:0x007fdde294b778 @num=1, @color=
 attr_accessor :num, :color  
 ```
 
-  we're telling our program to do build these methods behind the scenes:
+  we're telling our program to build these methods behind the scenes:
 
 ```ruby  
 #getters
