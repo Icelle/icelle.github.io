@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://Icelle.github.io/atom.xml" rel="self"/>
-  <link href="http://Icelle.github.io/"/>
-  <updated>2013-11-07T22:23:25-05:00</updated>
-  <id>http://Icelle.github.io/</id>
+  <link href="http://icelle.github.io/atom.xml" rel="self"/>
+  <link href="http://icelle.github.io/"/>
+  <updated>2013-11-12T08:55:40-05:00</updated>
+  <id>http://icelle.github.io/</id>
   <author>
     <name><![CDATA[Icelle]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Learn Programming Basics Rolling Dice, Part 1]]></title>
-    <link href="http://Icelle.github.io/blog/2013/11/07/first-post/"/>
+    <link href="http://icelle.github.io/blog/2013/11/07/first-post/"/>
     <updated>2013-11-07T19:34:00-05:00</updated>
-    <id>http://Icelle.github.io/blog/2013/11/07/first-post</id>
+    <id>http://icelle.github.io/blog/2013/11/07/first-post</id>
     <content type="html"><![CDATA[<p>I started dabbling into the coding arts a few months ago (hence Code Gazer). I read Chris Pine’s <em>Learn to Program</em>. This is my attempt to elaborate on Pine’s Die Example to further understand the relationships between objects, classes, variables and methods.</p>
 
 <p><strong>Pine Example:</strong> Create a die that gives you a random number when you roll it.</p>
@@ -121,7 +121,7 @@ To create an object, we need to create a new class: <code>class Die</code>.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>  We can see the object has <code>@num=1, @color="yellow"</code> (Ruby is calling the inspect method on the object, which irb is returnign) in it, but we just can&rsquo;t retrieve and use it. To do that, we can use a Ruby construct: <code>attr_accessor</code>. This construct is a shortcut given to us by the Ruby Gods to help us with our code crafting.</p>
+<p>  We can see the object has <code>@num=1, @color="yellow"</code> (Ruby is calling the inspect method on the object, which irb is returning) in it, but we can&rsquo;t retrieve and use it. To do that, we can use a Ruby construct: <code>attr_accessor</code>. This construct is a shortcut given to us by the Ruby Gods to help us with our code crafting.</p>
 
 <p>  <code>attr_accessor</code> provides two methods automatically for the developer: a &lsquo;getter&rsquo; method and a &lsquo;setter&rsquo; method. The sole purpose of the getter is to read/return the value of a particular instance variable. The setter, on the other hand, assigns/sets the value for a particular instance variable. When we write,</p>
 
@@ -130,7 +130,7 @@ To create an object, we need to create a new class: <code>class Die</code>.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>  we&rsquo;re telling our program to do build these methods behind the scenes:</p>
+<p>  we&rsquo;re telling our program to build these methods behind the scenes:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
