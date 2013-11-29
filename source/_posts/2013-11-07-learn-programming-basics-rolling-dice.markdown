@@ -4,6 +4,7 @@ title: "Learn Programming Basics Rolling Dice, Part 1"
 date: 2013-11-07 19:34
 comments: true
 categories: ruby, coding
+quote: Don't impose expectations onto things. Let things be. Abandon your hopes and fears. They're irrelevant.
 ---
 I started dabbling into the coding arts a few months ago (hence Code Gazer). I read Chris Pine’s *Learn to Program*. This is my attempt to elaborate on Pine’s Die Example to further understand the relationships between objects, classes, variables and methods.
 
@@ -132,5 +133,3 @@ d.roll => "You rolled a 1 with color yellow"
   It works! Yay!
 
 Phew! I hope I explained those concepts clearly and sufficiently. On my next post, I am going to change it up a bit and create two different dice, one colored and one numbered, so we can learn about class inheritance.
-
-<p class="post-quote">Don't impose expectations onto things. Let things be. Abandon your hopes and fears. They're irrelevant.</p>

@@ -22,8 +22,14 @@
   {% if excerpted == 'true' %}
     <footer>
       <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+      {% if post.quote %}
+      <p class="post-quote-idx">{{ post.quote }}</p>
+      {% endif %}
     </footer>
   {% endif %}
 {% else %}
 <div class="entry-content">{{ content }}</div>
+  {% if page.quote %}
+  <p class="post-quote">{{ page.quote }}</p>
+  {% endif %}
 {% endif %}

@@ -4,6 +4,7 @@ title: "Software Licensing and Virtual Worlds"
 date: 2013-11-28 12:00
 comments: true
 categories: Software-licensing, Online-Games/Virtual-Worlds
+quote: Watch your thoughts; they become words. Watch your words; they become actions. Watch your actions; they become habit. Watch your habits; they become character. Watch your character; it becomes your destiny. - Lao Tzu
 ---
 
 Before dabbling in the coding arts, I was a Code Head (not the technology kind, the [Uniform Commercial Code](http://law.duke.edu/lib/researchguides/pdf/ucc.pdf) kind). It's really interesting to me how law applies to new technology. In this article, I am going to discuss the effectiveness of using software license agreements in resolving virtual property right disputes that arise in massively multiplayer online role-playing games (MMORPG).
@@ -46,6 +47,3 @@ The problem in this is that the DMCA Safe Harbor Provision immunizes ISPs from l
 
 **Conclusion:**
 Software license agreements are not effective in resolving disputes that arise in MMORPGs because license agreements are meant to protect the providers, not consumers. The courts must look at other applicable law instead of merely looking at the validity of clickwrap and shrinkwrap license agreements to determine the merits of each case. Although the virtual world is not real, deprivation of virtual goods and defamation of avatars have real-life monetary consequences to MMORPG players.
-
-
-<p class="post-quote">Watch your thoughts; they become words. Watch your words; they become actions. Watch your actions; they become habit. Watch your habits; they become character. Watch your character; it becomes your destiny. - Lao Tzu</p>

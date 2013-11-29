@@ -1,7 +1,11 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
-.post-quote{
+.post-quote, .post-quote-idx {
   color: #998000;
   font-style: italic;
+  margin: 0;
+}
+.post-quote-idx {
+  padding: 1em;
 }
