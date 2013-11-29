@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ruby, | My Octopress Blog]]></title>
+  <title><![CDATA[Category: ruby, | Code Gazer]]></title>
   <link href="http://icelle.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://icelle.github.io/"/>
-  <updated>2013-11-12T08:55:40-05:00</updated>
+  <updated>2013-11-28T21:18:49-05:00</updated>
   <id>http://icelle.github.io/</id>
   <author>
-    <name><![CDATA[Icelle]]></name>
+    <name><![CDATA[Icelle Ku]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Learn Programming Basics Rolling Dice, Part 1]]></title>
-    <link href="http://icelle.github.io/blog/2013/11/07/first-post/"/>
+    <link href="http://icelle.github.io/blog/2013/11/07/learn-programming-basics-rolling-dice/"/>
     <updated>2013-11-07T19:34:00-05:00</updated>
-    <id>http://icelle.github.io/blog/2013/11/07/first-post</id>
+    <id>http://icelle.github.io/blog/2013/11/07/learn-programming-basics-rolling-dice</id>
     <content type="html"><![CDATA[<p>I started dabbling into the coding arts a few months ago (hence Code Gazer). I read Chris Pine’s <em>Learn to Program</em>. This is my attempt to elaborate on Pine’s Die Example to further understand the relationships between objects, classes, variables and methods.</p>
 
 <p><strong>Pine Example:</strong> Create a die that gives you a random number when you roll it.</p>
@@ -51,7 +51,7 @@ class Die
 <p>  def initialize</p>
 
 <pre><code>@num = nil
-@color = nil    
+@color = nil
 roll
 </code></pre>
 
@@ -107,7 +107,7 @@ NoMethodError: undefined method 'num' for #&lt;Die:0x007fdde294b778 @num=1, @col
 <p>  <code>attr_accessor</code> provides two methods automatically for the developer: a &lsquo;getter&rsquo; method and a &lsquo;setter&rsquo; method. The sole purpose of the getter is to read/return the value of a particular instance variable. The setter, on the other hand, assigns/sets the value for a particular instance variable. When we write,</p>
 
 <p><code>ruby
-attr_accessor :num, :color  
+attr_accessor :num, :color
 </code></p>
 
 <p>  we&rsquo;re telling our program to build these methods behind the scenes:</p>

@@ -5,8 +5,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Learn Programming Basics Rolling Dice, Part 1 - My Octopress Blog</title>
-  <meta name="author" content="Icelle">
+  <title>Learn Programming Basics Rolling Dice, Part 1 - Code Gazer</title>
+  <meta name="author" content="Icelle Ku">
 
   
   <meta name="description" content="I started dabbling into the coding arts a few months ago (hence Code Gazer). I read Chris Pine’s Learn to Program. This is my attempt to elaborate on &hellip;">
@@ -18,10 +18,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://icelle.github.io/blog/2013/11/07/first-post">
+  <link rel="canonical" href="http://icelle.github.io/blog/2013/11/07/learn-programming-basics-rolling-dice">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Code Gazer" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -36,9 +36,9 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Code Gazer</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>Ruby, Rails and Jails</h2>
   
 </hgroup>
 
@@ -277,7 +277,7 @@ To create an object, we need to create a new class: <code>class Die</code>.</p>
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Icelle</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Icelle Ku</span></span>
 
       
 
@@ -305,7 +305,7 @@ To create an object, we need to create a new class: <code>class Die</code>.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://icelle.github.io/blog/2013/11/07/first-post/" data-via="icelleku" data-counturl="http://icelle.github.io/blog/2013/11/07/first-post/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://icelle.github.io/blog/2013/11/07/learn-programming-basics-rolling-dice/" data-via="icelleku" data-counturl="http://icelle.github.io/blog/2013/11/07/learn-programming-basics-rolling-dice/" >Tweet</a>
   
   
   
@@ -314,6 +314,8 @@ To create an object, we need to create a new class: <code>class Die</code>.</p>
     
     <p class="meta">
       
+      
+        <a class="basic-alignment right" href="/blog/2013/11/28/software-licensing-and-the-virtual-worlds/" title="Next Post: Software Licensing and Virtual Worlds">Software Licensing and Virtual Worlds &raquo;</a>
       
     </p>
   </footer>
@@ -328,14 +330,53 @@ To create an object, we need to create a new class: <code>class Die</code>.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/11/07/first-post/">Learn Programming Basics Rolling Dice, Part 1</a>
+        <a href="/blog/2013/11/28/software-licensing-and-the-virtual-worlds/">Software Licensing and Virtual Worlds</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/07/learn-programming-basics-rolling-dice/">Learn Programming Basics Rolling Dice, Part 1</a>
       </li>
     
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Icelle">@Icelle</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Icelle',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
 
 
+
+
+<section>
+    <h1>Twitter</h1>
+    <a class="twitter-timeline" href="https://twitter.com/IcelleKu" data-widget-id="406245221991579648">Tweets by @IcelleKu</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>
 
 
   
@@ -345,7 +386,7 @@ To create an object, we need to create a new class: <code>class Die</code>.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Icelle -
+  Copyright &copy; 2013 - Icelle Ku -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
