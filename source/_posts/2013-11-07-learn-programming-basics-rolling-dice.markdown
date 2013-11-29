@@ -133,4 +133,4 @@ d.roll => "You rolled a 1 with color yellow"
 
 Phew! I hope I explained those concepts clearly and sufficiently. On my next post, I am going to change it up a bit and create two different dice, one colored and one numbered, so we can learn about class inheritance.
 
-*Don't impose expectations onto things. Let things be. Abandon your hopes and fears. They're irrelevant.*
+<p class="post-quote">Don't impose expectations onto things. Let things be. Abandon your hopes and fears. They're irrelevant.</p>
