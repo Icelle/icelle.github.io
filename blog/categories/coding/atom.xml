@@ -4,7 +4,7 @@
   <title><![CDATA[Category: coding | Code Gazer]]></title>
   <link href="http://icelle.github.io/blog/categories/coding/atom.xml" rel="self"/>
   <link href="http://icelle.github.io/"/>
-  <updated>2013-11-28T22:51:25-05:00</updated>
+  <updated>2013-11-28T22:56:08-05:00</updated>
   <id>http://icelle.github.io/</id>
   <author>
     <name><![CDATA[Icelle Ku]]></name>
@@ -35,6 +35,9 @@ end
 
 <p>Everything is an object. Class is an object that allows us to make new classes of objects and defines how those classes behave. A method is the behavior of those objects.
 A die is not a basic object in Ruby (i.e. range, integers, strings, arrays and hashes) so in this example, we need to create a new object. We can do that by creating a new class. To create a new class, we use a construct called <code>class</code> (which defines a class&rsquo;s behavior) and a class name, <code>Die</code>. The first letter of a class name is always capitalized.</p>
+
+<!-- more -->
+
 
 <p>After creating a class, we need to define its behavior. We can do that by making a method (behavior) that applies to the <code>class Die</code>: use the word <code>def</code> followed by the method name, <code>roll</code>. We define <code>roll</code> through the logic <code>1 + rand(6)</code> which says &ldquo;return a random number between 1 and 6.&rdquo;</p>
 
