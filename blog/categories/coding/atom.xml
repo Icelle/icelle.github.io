@@ -4,7 +4,7 @@
   <title><![CDATA[Category: coding | Code Gazer]]></title>
   <link href="http://icelle.github.io/blog/categories/coding/atom.xml" rel="self"/>
   <link href="http://icelle.github.io/"/>
-  <updated>2013-11-28T22:56:08-05:00</updated>
+  <updated>2013-11-28T23:07:10-05:00</updated>
   <id>http://icelle.github.io/</id>
   <author>
     <name><![CDATA[Icelle Ku]]></name>
@@ -158,7 +158,8 @@ d.roll =&gt; "You rolled a 1 with color yellow"
 
 <p>Phew! I hope I explained those concepts clearly and sufficiently. On my next post, I am going to change it up a bit and create two different dice, one colored and one numbered, so we can learn about class inheritance.</p>
 
-<p><em>Don&rsquo;t impose expectations onto things. Let things be. Abandon your hopes and fears. They&rsquo;re irrelevant.</em></p>
+<p class="post-quote">Don't impose expectations onto things. Let things be. Abandon your hopes and fears. They're irrelevant.</p>
+
 ]]></content>
   </entry>
   
