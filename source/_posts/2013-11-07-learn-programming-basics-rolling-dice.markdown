@@ -20,6 +20,8 @@ end
 Everything is an object. Class is an object that allows us to make new classes of objects and defines how those classes behave. A method is the behavior of those objects.
 A die is not a basic object in Ruby (i.e. range, integers, strings, arrays and hashes) so in this example, we need to create a new object. We can do that by creating a new class. To create a new class, we use a construct called `class` (which defines a class's behavior) and a class name, `Die`. The first letter of a class name is always capitalized.
 
+<!-- more -->
+
 After creating a class, we need to define its behavior. We can do that by making a method (behavior) that applies to the `class Die`: use the word `def` followed by the method name, `roll`. We define `roll` through the logic `1 + rand(6)` which says "return a random number between 1 and 6."
 
 Simple enough? Let's go to the next example.
