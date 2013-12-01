@@ -1,0 +1,93 @@
+---
+layout: post
+title: "Breakable Toy: Sprout"
+date: 2013-12-01 12:00
+comments: true
+categories: Coding, Ruby, Rails, Babies
+quote: Clear your mind. Practice patience. Practice simplicity.
+---
+My first "big" coding project is called Sprout. It's an app that tracks children's growth rate (weight and height) over time. Here's a quick summary of my user stories and acceptance criteria--
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px;">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+    <li>As a user,</li>
+    <li>I want to add a child/children</li>
+    <li>So I can start tracking weight and height.</li>
+  <ul style="padding: 0 0 0 2em; margin: 0">
+    <li>User must add a child.</li>
+    <li>User can add multiple children.</li>
+    <li>User must enter each child's birth date, gender and starting height and weight.</li>
+  </ul>
+</div>
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As a user,</li>
+  <li>I can update child's height and weight or edit existing information about child</li>
+  <li>So my child's information is accurate.</li>
+  <ul style="padding: 0 0 0 2em; margin: 0">
+    <li>User can click update button to enter new height and weight for a specific child.</li>
+    <li>User can click edit button to change/add information.</li>
+  </ul>
+</div>
+<!-- more -->
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As the program,</li>
+  <li>I want to produce a graph that shows me timeline of growth rate for each/all children</li>
+  <li>So user can compare weight and height.</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Track date/time of when user enters the information (automatically or have user specify date/time).</li>
+    <li>Must have a graph legend for each child.</li>
+    <li>User can switch from one child to another by clicking on the legend buttons.</li>
+    <li>User can click "all" legend button to see graph of all children as a group.</li>
+  </ul>
+</div>
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As a user </li>
+  <li>I want to see my child's average, mean and median height and weight as an individual</li>
+  <li>So I can accurately track my child's progress.</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Calculate individual child's lowest weight, include time stamp.</li>
+    <li>Calculate individual child's highest weight, include time stamp.</li>
+    <li>Calculate individual child's average weight, include time stamp.</li>
+  </ul>
+</div>
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As the program</li>
+  <li>I want to allow users to see national average in comparison with child's stats</li>
+  <li>So user knows if child's development is on the right track compared to the national average.</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Compare child's weight and height to national average based on gender and age.</li>
+    <li>Show national average on individual child's graph.</li>
+  </ul>
+</div>
+
+<p style= "padding: 15px 0 0 0"> If I have extra time, I may work on the following nice-to-have functionalities:</p>
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As a user</li>
+  <li>I want to get a badge every time my child meets a certain milestones</li>
+  <li>So I can celebrate!</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Notify and give badge to user when child reaches certain age, weight or height. For example, "Congratulations! Your child is now  x months old!" or "Congratulations! Your child is now 20 lbs!"</li>
+  </ul>
+</div>
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As a user</li>
+  <li>I want to upload my child's picture and use that as the legend</li>
+  <li>So that I can easily differentiate each child in the graph if I have multiple children.</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Allow user to upload picture and use that picture as legend for the graph.</li>
+  </ul>
+</div>
+
+<p style= "padding: 15px 0 0 0">I hope to have a working app (and working knowledge of Ruby on Rails) in the next eight weeks. I have a lot to learn. I'm crossing my fingers!</p>
+
