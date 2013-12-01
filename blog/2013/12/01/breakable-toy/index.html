@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Breakable Toy: Sprout - Code Gazer</title>
+  <meta name="author" content="Icelle Ku">
+
+  
+  <meta name="description" content="Breakable Toy: Sprout Dec 1st, 2013 My first &ldquo;big&rdquo; coding project is called Sprout. It&rsquo;s an app that tracks children&rsquo;s &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://icelle.github.io/blog/2013/12/01/breakable-toy">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Code Gazer" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="head-txt">
+    <h1><a href="/">Code Gazer</a></h1>
+    <h2><span class="ruby">Ruby, Rails</span> &amp; <span class="scales">Scales</span></h2>
+  </div>
+  <div id="profile-pic"><img src="/images/profile_pic.png"/></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:icelle.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Breakable Toy: Sprout</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-01T12:00:00-05:00" pubdate data-updated="true">Dec 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>My first &ldquo;big&rdquo; coding project is called Sprout. It&rsquo;s an app that tracks children&rsquo;s growth rate (weight and height) over time. Here&rsquo;s a quick summary of my user stories and acceptance criteria&mdash;</p>
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px;">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+    <li>As a user,</li>
+    <li>I want to add a child/children</li>
+    <li>So I can start tracking weight and height.</li>
+  <ul style="padding: 0 0 0 2em; margin: 0">
+    <li>User must add a child.</li>
+    <li>User can add multiple children.</li>
+    <li>User must enter each child&#8217;s birth date, gender and starting height and weight.</li>
+  </ul>
+</div>
+
+
+
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As a user,</li>
+  <li>I can update child&#8217;s height and weight or edit existing information about child</li>
+  <li>So my child&#8217;s information is accurate.</li>
+  <ul style="padding: 0 0 0 2em; margin: 0">
+    <li>User can click update button to enter new height and weight for a specific child.</li>
+    <li>User can click edit button to change/add information.</li>
+  </ul>
+</div>
+
+
+<!-- more -->
+
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As the program,</li>
+  <li>I want to produce a graph that shows me timeline of growth rate for each/all children</li>
+  <li>So user can compare weight and height.</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Track date/time of when user enters the information (automatically or have user specify date/time).</li>
+    <li>Must have a graph legend for each child.</li>
+    <li>User can switch from one child to another by clicking on the legend buttons.</li>
+    <li>User can click &#8220;all&#8221; legend button to see graph of all children as a group.</li>
+  </ul>
+</div>
+
+
+
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As a user </li>
+  <li>I want to see my child&#8217;s average, mean and median height and weight as an individual</li>
+  <li>So I can accurately track my child&#8217;s progress.</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Calculate individual child&#8217;s lowest weight, include time stamp.</li>
+    <li>Calculate individual child&#8217;s highest weight, include time stamp.</li>
+    <li>Calculate individual child&#8217;s average weight, include time stamp.</li>
+  </ul>
+</div>
+
+
+
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As the program</li>
+  <li>I want to allow users to see national average in comparison with child&#8217;s stats</li>
+  <li>So user knows if child&#8217;s development is on the right track compared to the national average.</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Compare child&#8217;s weight and height to national average based on gender and age.</li>
+    <li>Show national average on individual child&#8217;s graph.</li>
+  </ul>
+</div>
+
+
+
+
+<p style= "padding: 15px 0 0 0"> If I have extra time, I may work on the following nice-to-have functionalities:</p>
+
+
+
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As a user</li>
+  <li>I want to get a badge every time my child meets a certain milestones</li>
+  <li>So I can celebrate!</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Notify and give badge to user when child reaches certain age, weight or height. For example, &#8220;Congratulations! Your child is now  x months old!&#8221; or &#8220;Congratulations! Your child is now 20 lbs!&#8221;</li>
+  </ul>
+</div>
+
+
+
+
+<div style="background-color: #f0f0f0; border: 1px solid black; padding: 10px; margin: 1em 0 0 0">
+  <ul style="list-style-type: none; padding: 0; margin: 0">
+  <li>As a user</li>
+  <li>I want to upload my child&#8217;s picture and use that as the legend</li>
+  <li>So that I can easily differentiate each child in the graph if I have multiple children.</li>
+<ul style="padding: 0 0 0 2em; margin: 0">
+    <li>Allow user to upload picture and use that picture as legend for the graph.</li>
+  </ul>
+</div>
+
+
+
+
+<p style= "padding: 15px 0 0 0">I hope to have a working app (and working knowledge of Ruby on Rails) in the next eight weeks. I have a lot to learn. I&#8217;m crossing my fingers!</p>
+
+
+
+</div>
+  
+  <p class="post-quote">Clear your mind. Practice patience. Practice simplicity.</p>
+  
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Icelle Ku</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-01T12:00:00-05:00" pubdate data-updated="true">Dec 1<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/babies/'>Babies</a>, <a class='category' href='/blog/categories/coding/'>Coding,</a>, <a class='category' href='/blog/categories/rails/'>Rails,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://icelle.github.io/blog/2013/12/01/breakable-toy/" data-via="icelleku" data-counturl="http://icelle.github.io/blog/2013/12/01/breakable-toy/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/11/28/software-licensing-and-the-virtual-worlds/" title="Previous Post: Software Licensing and Virtual Worlds">&laquo; Software Licensing and Virtual Worlds</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/12/01/breakable-toy/">Breakable Toy: Sprout</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/28/software-licensing-and-the-virtual-worlds/">Software Licensing and Virtual Worlds</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/07/learn-programming-basics-rolling-dice/">Learn Programming Basics Rolling Dice, Part 1</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Icelle">@Icelle</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Icelle',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+<section>
+    <h1>Twitter</h1>
+    <a class="twitter-timeline" href="https://twitter.com/IcelleKu" data-widget-id="406245221991579648">Tweets by @IcelleKu</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Icelle Ku -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
